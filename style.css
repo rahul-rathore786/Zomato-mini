@@ -1,0 +1,266 @@
+/* Navbar styles */
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fff;
+	padding: 20px 50px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav .logo {
+	font-size: 28px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #333;
+	text-decoration: none;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li a {
+	font-family: 'Baloo Bhaijaan 2', cursive;
+	font-family: 'Lato', sans-serif;
+	font-family: 'Mukta', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	color: #333;
+	font-size: 18px;
+	transition: all 0.3s;
+}
+
+nav ul li a:hover {
+	color: #fff;
+	background-color: #333;
+	border-radius: 10%;
+}
+
+nav .login {
+	display: inline-block;
+	background-color: #333;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+/* nav .login:hover {
+	background-color: #fff;
+	color: #333;
+	border-radius: 10%;
+} */
+
+nav .animated-button {
+	position: relative;
+	display: inline-block;
+	margin-left: 50px;
+	font-size: 18px;
+	text-decoration: none;
+	color: #333;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	overflow: hidden;
+	transition: all 0.3s;
+}
+
+nav .animated-button:hover {
+	color: #fff;
+}
+
+nav .animated-button:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #333;
+	z-index: -1;
+	transition: all 0.3s;
+	transform: translateY(100%);
+}
+
+nav .animated-button:hover:before {
+	transform: translateY(0);
+}
+
+nav .animated-button:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0%;
+	height: 100%;
+	background-color: #fff;
+	z-index: -2;
+	transition: all 0.3s;
+}
+
+nav .animated-button:hover:after {
+	width: 100%;
+}
+
+
+/* Category styles */
+
+#category {
+	margin: 50px 0;
+}
+
+#category h2 {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.circle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+	flex-wrap: wrap;
+}
+
+.circle {
+	display: inline-block;
+	position: relative;
+	margin-right: 30px;
+	width: 150px;
+	height: 150px;
+	/* display: flex; */
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	border-radius: 50%;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	transition: transform 0.3s;
+}
+
+.circle:hover {
+	transform: scale(1.1);
+}
+
+.circle img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: cover;
+}
+
+.circle p {
+	position: absolute;
+	bottom: -40px;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+	margin: 0;
+	opacity: 0;
+	transition: all 0.3s;
+}
+
+.circle:hover p {
+	bottom: 10px;
+	opacity: 1;
+}
+
+.circle p span {
+	display: block;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+@keyframes circle-animation {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-10px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+
+
+/* Food item styles */
+#food {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 30px;
+}
+
+#food h2 {
+	font-family: 'Alkatra', cursive;
+	font-family: 'Baloo Bhaijaan 2', cursive;
+	font-family: 'Lato', sans-serif;
+	font-family: 'Mukta', sans-serif;
+	font-family: 'Ubuntu', sans-serif; 
+	text-align: center;
+	margin-bottom: 40px;
+
+}
+
+.food-item {
+	font-family: 'Alkatra', cursive;
+	font-family: 'Baloo Bhaijaan 2', cursive;
+	font-family: 'Lato', sans-serif;
+	font-family: 'Mukta', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
+	background-color: #fff;
+	padding: 20px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.food-item img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	margin-bottom: 20px;
+	transition: transform 0.5s;
+	border-radius: 5%;
+}
+
+.food-item:hover img {
+	transform: scale(1.1);
+}
+
+.food-item h3 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.food-item p {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.rating {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background-color: #f8d64e;
+	color: #fff;
+	font-size: 18px;
+	padding: 5px 10px;
+	border-radius: 10px;
+}
